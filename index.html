@@ -434,17 +434,6 @@ section { position: relative; z-index: 2; padding: 100px 48px; }
   line-height: 1.6; 
   margin-bottom: 20px;
 }
-.service-price { 
-  font-family: var(--mono); 
-  font-size: 0.75rem; 
-  color: var(--neon); 
-  font-weight: 600;
-  padding: 8px 16px;
-  background: rgba(198,241,53,0.1);
-  border: 1px solid rgba(198,241,53,0.3);
-  border-radius: 6px;
-  display: inline-block;
-}
 
 .upwork-badge {
   margin-top: 24px; padding: 20px 24px;
@@ -476,217 +465,56 @@ section { position: relative; z-index: 2; padding: 100px 48px; }
 .testi-name { font-size: 0.82rem; font-weight: 700; margin-bottom: 2px; }
 .testi-loc { font-size: 0.68rem; color: var(--muted); font-family: var(--mono); }
 
-/* CONTACT */
-.contact-wrap { display: grid; grid-template-columns: 4fr 5fr; gap: 80px; align-items: start; }
-.contact-left h2 { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.1; margin-bottom: 20px; }
-.contact-left h2 em { font-style: italic; color: var(--neon); }
-.contact-left p { font-size: 0.82rem; color: var(--muted2); line-height: 1.8; margin-bottom: 36px; }
-.c-links { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
-.c-link { display: flex; align-items: center; gap: 16px; background: var(--surface); padding: 18px 20px; text-decoration: none; color: var(--text); font-size: 0.8rem; transition: background .25s; }
-.c-link:hover { background: var(--surface2); color: var(--neon); }
-.c-link-icon { font-size: 1.1rem; flex-shrink: 0; }
-.c-link-label { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); display: block; margin-bottom: 2px; letter-spacing: 0.08em; text-transform: uppercase; }
-.c-avail { margin-top: 24px; display: flex; align-items: center; gap: 10px; font-size: 0.72rem; color: var(--muted2); font-family: var(--mono); }
-.avail-dot { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; animation: pulse 2s infinite; }
-@keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.4)} 50%{box-shadow:0 0 0 6px rgba(74,222,128,0)} }
-
-.contact-form { display: flex; flex-direction: column; gap: 14px; }
-.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.cf-field { display: flex; flex-direction: column; gap: 6px; }
-.cf-label { font-family: var(--mono); font-size: 0.62rem; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; }
-.cf-input, .cf-textarea, .cf-select {
-  background: var(--surface); border: 1px solid var(--border-light);
-  color: var(--text); padding: 12px 14px;
-  font-family: var(--sans); font-size: 0.82rem; outline: none;
-  transition: border-color .25s;
-  appearance: none; -webkit-appearance: none;
-}
-.cf-input:focus, .cf-textarea:focus, .cf-select:focus { border-color: var(--neon); }
-.cf-select option { background: var(--surface); }
-.cf-textarea { height: 120px; resize: none; }
-.cf-submit { background: var(--neon); color: #080b0f; border: none; padding: 15px 32px; font-family: var(--sans); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.03em; cursor: none; align-self: flex-start; transition: all .25s; }
-.cf-submit:hover { background: var(--cyan); transform: translateY(-1px); }
-
 /* FOOTER */
-footer { position: relative; z-index: 2; border-top: 1px solid var(--border); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; }
-.footer-logo { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--text); text-decoration: none; }
-.footer-logo span { color: var(--neon); }
-.footer-copy { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); }
-.footer-links { display: flex; gap: 24px; }
-.footer-links a { font-size: 0.72rem; color: var(--muted2); text-decoration: none; transition: color .25s; }
-.footer-links a:hover { color: var(--neon); }
-
-/* REVEAL */
-.r { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-.r.in { opacity: 1; transform: translateY(0); }
-.r.d1 { transition-delay: .1s; }
-.r.d2 { transition-delay: .2s; }
-.r.d3 { transition-delay: .3s; }
-
-/* PROJECT MODAL */
-.modal-overlay {
-  position: fixed; inset: 0; z-index: 1000;
-  background: rgba(4,6,9,0.92);
-  backdrop-filter: blur(12px);
-  opacity: 0; pointer-events: none;
-  transition: opacity .35s ease;
-  overflow-y: auto;
-  display: flex; align-items: flex-start; justify-content: center;
-  padding: 40px 24px;
-}
-.modal-overlay.open { opacity: 1; pointer-events: all; }
-body.modal-open { overflow: hidden; }
-
-.modal-box {
+footer { 
+  position: relative; 
+  z-index: 2; 
+  border-top: 1px solid var(--border); 
+  padding: 24px 48px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
   background: var(--surface);
-  border: 1px solid var(--border-light);
-  width: 100%; max-width: 1060px;
-  position: relative;
-  transform: translateY(30px); opacity: 0;
-  transition: transform .4s cubic-bezier(.22,1,.36,1), opacity .35s ease;
 }
-.modal-overlay.open .modal-box { transform: translateY(0); opacity: 1; }
-
-.modal-close {
-  position: fixed; top: 24px; right: 32px; z-index: 1001;
-  width: 44px; height: 44px;
-  background: var(--surface2); border: 1px solid var(--border-light);
-  color: var(--text); font-size: 1.3rem; cursor: none;
-  display: flex; align-items: center; justify-content: center;
-  transition: all .25s; font-family: var(--sans);
+.footer-logo { 
+  font-family: var(--serif); 
+  font-style: italic; 
+  font-size: 1.2rem; 
+  color: var(--text); 
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
-.modal-close:hover { background: var(--neon); color: var(--bg); border-color: var(--neon); }
-
-/* Modal image gallery */
-.modal-gallery {
-  position: relative; width: 100%;
-  background: var(--surface2);
-  border-bottom: 1px solid var(--border);
-  overflow: hidden;
+.footer-logo span { 
+  color: var(--neon);
+  font-weight: 700;
 }
-.modal-gallery-main {
-  width: 100%; aspect-ratio: 16/9;
-  position: relative; overflow: hidden;
-  background: #0a0d12;
-  display: flex; align-items: center; justify-content: center;
+.footer-copy { 
+  font-family: var(--mono); 
+  font-size: 0.7rem; 
+  color: var(--muted);
+  letter-spacing: 0.08em;
 }
-.modal-gallery-main img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: top center;
-  transition: opacity .3s ease;
+.footer-links { 
+  display: flex; 
+  gap: 24px; 
 }
-.modal-gallery-main.mobile-view img {
-  object-fit: contain; object-position: center;
-  padding: 20px; background: #0a0d12;
+.footer-links a { 
+  font-size: 0.75rem; 
+  color: var(--neon); 
+  text-decoration: none; 
+  transition: color .25s;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(198,241,53,0.3);
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: rgba(198,241,53,0.05);
 }
-.modal-gallery-main .no-img-placeholder {
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 12px; width: 100%; height: 100%;
-  min-height: 400px;
-}
-.no-img-placeholder .placeholder-icon { font-size: 4rem; opacity: 0.15; }
-.no-img-placeholder .placeholder-text { font-size: 0.75rem; color: var(--muted); font-family: var(--mono); }
-
-/* Gallery thumbs */
-.modal-thumbs {
-  display: flex; gap: 2px; padding: 8px;
-  background: var(--bg); overflow-x: auto;
-}
-.modal-thumb {
-  width: 90px; height: 60px; flex-shrink: 0;
-  overflow: hidden; cursor: none;
-  border: 2px solid transparent;
-  transition: border-color .2s; position: relative;
-  background: var(--surface2);
-  display: flex; align-items: center; justify-content: center;
-}
-.modal-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.modal-thumb.active { border-color: var(--neon); }
-.modal-thumb-placeholder { font-size: 1.5rem; opacity: 0.2; }
-
-/* Modal content */
-.modal-content { display: grid; grid-template-columns: 1fr 340px; }
-
-.modal-main { padding: 48px; border-right: 1px solid var(--border); }
-
-.modal-cat-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em;
-  text-transform: uppercase; padding: 5px 12px; border: 1px solid;
-  margin-bottom: 20px;
-}
-.modal-cat-badge.web { border-color: rgba(198,241,53,0.35); color: var(--neon); background: var(--neon-dim); }
-.modal-cat-badge.app { border-color: rgba(56,217,245,0.3); color: var(--cyan); background: var(--cyan-dim); }
-.modal-cat-badge.desktop { border-color: rgba(255,107,53,0.3); color: var(--orange); background: rgba(255,107,53,0.08); }
-
-.modal-title {
-  font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.6rem);
-  line-height: 1.1; margin-bottom: 8px;
-}
-.modal-subtitle { font-size: 0.85rem; color: var(--muted2); margin-bottom: 32px; }
-
-.modal-section-label {
-  font-family: var(--mono); font-size: 0.62rem; color: var(--muted);
-  letter-spacing: 0.14em; text-transform: uppercase;
-  margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
-}
-.modal-section-label::before { content: ''; width: 16px; height: 1px; background: var(--muted); }
-
-.modal-desc { font-size: 0.88rem; color: var(--muted2); line-height: 1.85; margin-bottom: 36px; }
-.modal-desc p { margin-bottom: 14px; }
-.modal-desc strong { color: var(--text); font-weight: 500; }
-
-.modal-features { margin-bottom: 36px; }
-.modal-feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.modal-feature-item {
-  display: flex; align-items: flex-start; gap: 10px;
-  padding: 12px 14px; background: var(--surface2);
-  border: 1px solid var(--border); font-size: 0.78rem; color: var(--text);
-}
-.modal-feature-item::before { content: '✓'; color: var(--neon); flex-shrink: 0; font-size: 0.75rem; margin-top: 1px; }
-
-.modal-sidebar { padding: 40px 32px; background: var(--surface2); }
-
-.modal-meta-group { margin-bottom: 32px; }
-.modal-meta-label {
-  font-family: var(--mono); font-size: 0.6rem; color: var(--muted);
-  letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;
-}
-.modal-role-badge {
-  display: inline-block; background: var(--neon-dim); border: 1px solid rgba(198,241,53,0.25);
-  color: var(--neon); font-size: 0.78rem; padding: 6px 14px; margin-bottom: 8px;
-}
-.modal-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.modal-tag {
-  font-family: var(--mono); font-size: 0.65rem; padding: 4px 10px;
-  background: var(--surface); border: 1px solid var(--border-light); color: var(--muted2);
-}
-.modal-tag.g { border-color: rgba(198,241,53,0.2); color: var(--neon); background: var(--neon-dim); }
-.modal-tag.c { border-color: rgba(56,217,245,0.18); color: var(--cyan); background: var(--cyan-dim); }
-
-.modal-divider { height: 1px; background: var(--border); margin: 24px 0; }
-
-.modal-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin-bottom: 24px; }
-.modal-stat { background: var(--surface); padding: 16px; text-align: center; }
-.modal-stat-num { font-family: var(--serif); font-size: 1.6rem; color: var(--neon); line-height: 1; }
-.modal-stat-label { font-size: 0.65rem; color: var(--muted); font-family: var(--mono); margin-top: 3px; }
-
-.modal-cta { display: block; background: var(--neon); color: var(--bg); text-align: center; padding: 14px; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: all .25s; margin-bottom: 10px; letter-spacing: 0.02em; }
-.modal-cta:hover { background: var(--cyan); }
-.modal-cta.ghost { background: transparent; color: var(--text); border: 1px solid var(--border-light); }
-.modal-cta.ghost:hover { border-color: var(--neon); color: var(--neon); }
-
-/* Cursor clickable override */
-.proj-card { cursor: none; }
-
-@media(max-width:768px){
-  .modal-content { grid-template-columns: 1fr; }
-  .modal-main { padding: 28px 20px; border-right: none; border-bottom: 1px solid var(--border); }
-  .modal-sidebar { padding: 28px 20px; }
-  .modal-feature-grid { grid-template-columns: 1fr; }
-  .modal-overlay { padding: 0; align-items: flex-end; }
-  .modal-box { max-width: 100%; }
-  .modal-close { top: 12px; right: 12px; }
+.footer-links a:hover { 
+  color: var(--cyan);
+  background: rgba(198,241,53,0.1);
+  border-color: var(--neon);
 }
 
 /* MOBILE */
@@ -698,8 +526,6 @@ body.modal-open { overflow: hidden; }
   .hero-right { display: none; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .contact-wrap { grid-template-columns: 1fr; gap: 40px; }
-  .cf-row { grid-template-columns: 1fr; }
   .testi-grid { grid-template-columns: 1fr; }
   .process-row { grid-template-columns: 1fr 1fr; }
   footer { flex-direction: column; gap: 16px; text-align: center; }
@@ -735,6 +561,135 @@ body.modal-open { overflow: hidden; }
 .inv-dash-num { font-size: 6px; font-weight: 700; color: #1e2a4a; }
 .inv-dash-label { font-size: 4px; color: #888; }
 
+/* PROJECT MODAL */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(4,6,9,0.92);
+  backdrop-filter: blur(12px);
+  opacity: 0; pointer-events: none;
+  transition: opacity .35s ease;
+  overflow-y: auto;
+  display: none;
+  align-items: flex-start; justify-content: center;
+  padding: 40px 24px;
+}
+.modal-overlay.open {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  max-width: 1200px; width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+.modal-close {
+  position: absolute; top: 20px; right: 20px; z-index: 10;
+  background: var(--surface2); border: 1px solid var(--border);
+  color: var(--text); width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 1.2rem;
+  transition: all .25s;
+}
+.modal-close:hover { background: var(--neon); color: #080b0f; }
+.modal-gallery {
+  background: var(--surface2);
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column;
+}
+.modal-gallery-main {
+  flex: 1; min-height: 400px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.modal-gallery-main img {
+  max-width: 100%; max-height: 100%; width: auto; height: auto;
+  object-fit: contain;
+}
+.modal-gallery-main.mobile-view img {
+  max-width: 100%; max-height: 100%; width: auto; height: auto;
+  object-fit: contain;
+}
+.modal-thumbs {
+  display: flex; gap: 8px; padding: 16px;
+  border-top: 1px solid var(--border);
+  overflow-x: auto;
+}
+.modal-thumb {
+  width: 80px; height: 60px; flex-shrink: 0;
+  border: 2px solid transparent; cursor: pointer;
+  overflow: hidden; opacity: 0.6;
+  transition: all .25s;
+}
+.modal-thumb.active { border-color: var(--neon); opacity: 1; }
+.modal-thumb:hover { opacity: 1; }
+.modal-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.modal-content { padding: 40px; }
+.modal-cat-badge {
+  display: inline-block; font-family: var(--mono); font-size: 0.65rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 14px; border: 1px solid; margin-bottom: 20px;
+}
+.modal-cat-badge.web { border-color: rgba(198,241,53,0.4); color: var(--neon); }
+.modal-cat-badge.app { border-color: rgba(56,217,245,0.4); color: var(--cyan); }
+.modal-cat-badge.desktop { border-color: rgba(255,107,53,0.4); color: var(--orange); }
+.modal-title { font-family: var(--serif); font-size: 1.8rem; margin-bottom: 8px; }
+.modal-subtitle { font-size: 0.9rem; color: var(--muted2); margin-bottom: 28px; }
+.modal-section-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.modal-desc { font-size: 0.85rem; line-height: 1.8; color: var(--muted2); margin-bottom: 32px; }
+.modal-desc strong { color: var(--neon); }
+.modal-features { margin-bottom: 32px; }
+.modal-feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.modal-feature-item {
+  font-size: 0.75rem; color: var(--text);
+  padding: 8px 12px; background: var(--surface2);
+  border: 1px solid var(--border);
+}
+.modal-sidebar { padding-left: 32px; border-left: 1px solid var(--border); }
+.modal-meta-group { margin-bottom: 24px; }
+.modal-meta-label { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.modal-role-badge {
+  display: inline-block; background: rgba(198,241,53,0.1);
+  border: 1px solid rgba(198,241,53,0.3); color: var(--neon);
+  padding: 6px 14px; font-size: 0.75rem;
+}
+.modal-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.modal-tag { font-family: var(--mono); font-size: 0.65rem; padding: 4px 10px; border: 1px solid var(--border-light); color: var(--muted2); }
+.modal-tag.g { border-color: rgba(198,241,53,0.25); color: var(--neon); }
+.modal-tag.c { border-color: rgba(56,217,245,0.2); color: var(--cyan); }
+.modal-divider { height: 1px; background: var(--border); margin: 24px 0; }
+.modal-stat-row { display: flex; gap: 24px; }
+.modal-stat { text-align: center; }
+.modal-stat-num { font-family: var(--serif); font-size: 1.4rem; color: var(--neon); }
+.modal-stat-label { font-size: 0.65rem; color: var(--muted); font-family: var(--mono); }
+.modal-cta {
+  display: block; background: var(--neon); color: #080b0f;
+  padding: 14px 24px; font-size: 0.85rem; font-weight: 700;
+  text-decoration: none; text-align: center; margin-bottom: 12px;
+  transition: all .25s;
+}
+.modal-cta:hover { background: var(--cyan); }
+.modal-cta.ghost {
+  background: transparent; border: 1px solid var(--border-light);
+  color: var(--muted2);
+}
+.modal-cta.ghost:hover { border-color: var(--neon); color: var(--neon); }
+.no-img-placeholder {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100%; height: 100%; color: var(--muted);
+}
+.placeholder-icon { font-size: 4rem; margin-bottom: 16px; opacity: 0.5; }
+.placeholder-text { font-family: var(--mono); font-size: 0.75rem; }
+.modal-thumb-placeholder {
+  width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+  background: var(--surface2); font-size: 2rem;
+}
+body.modal-open { overflow: hidden; }
+
 </style>
 </head>
 <body>
@@ -748,12 +703,11 @@ body.modal-open { overflow: hidden; }
   <ul class="nav-links">
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-hire">Hire Me →</a>
+  <a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="nav-hire">Hire Me →</a>
 </nav>
 
 <section id="hero">
@@ -774,7 +728,7 @@ body.modal-open { overflow: hidden; }
     </p>
     <div class="hero-ctas">
       <a href="#projects" class="cta-main">See My Work</a>
-      <a href="#contact" class="cta-ghost">Start a Project</a>
+      <a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="cta-ghost">Start a Project</a>
     </div>
   </div>
 
@@ -997,8 +951,8 @@ body.modal-open { overflow: hidden; }
           <img src="images/medibook.jpg" alt="MediBook" onerror="this.style.display='none'">
           <span class="proj-cat web">Web App</span>
           <div class="proj-thumb-inner" style="opacity:1;position:relative;">
-            <div style="width:82%;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.5);height:78%;">
-              <div class="mock-browser-bar"><div class="mock-dot r"></div><div class="mock-dot y"></div><div class="mock-dot g"></div></div>
+            <div style="width:82%;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.5);">
+              <div class="mock-browser-bar"><div class="mock-dot r"></div><div class="mock-dot y"></div><div class="mock-dot g"></div><div style="background:#e8e8e8;border-radius:3px;height:12px;flex:1;margin-left:6px;"></div></div>
               <div style="background:#060c18;height:calc(100% - 28px);padding:6px;display:flex;flex-direction:column;gap:3px;">
                 <div style="background:#0d1830;border-radius:2px;padding:4px 6px;display:flex;justify-content:space-between;align-items:center;">
                   <span style="font-size:5px;color:#4a9dff;font-weight:700;">MediBook</span>
@@ -1027,7 +981,7 @@ body.modal-open { overflow: hidden; }
           </div>
           <div class="proj-footer">
             <span class="proj-role">Full Stack Developer (Next.js & Django)</span>
-            <a href="#contact" class="proj-link">Enquire →</a>
+            <a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="proj-link">Enquire →</a>
           </div>
         </div>
       </div>
@@ -1051,7 +1005,7 @@ body.modal-open { overflow: hidden; }
                   <div style="font-size:5px;font-weight:700;color:#1e2a4a;margin-bottom:3px;">Dashboard</div>
                   <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:3px;">
                     <div style="background:white;border-radius:2px;padding:3px;box-shadow:0 1px 3px rgba(0,0,0,.1);"><div style="font-size:5px;font-weight:700;color:#1e2a4a;">11</div><div style="font-size:3px;color:#888;">Products</div></div>
-                    <div style="background:white;border-radius:2px;padding:3px;box-shadow:0 1px 3px rgba(0,0,0,.1);"><div style="font-size:5px;font-weight:700;color:#1e2a4a;">$4,179</div><div style="font-size:3px;color:#888;">Revenue</div></div>
+                    <div style="background:white;border-radius:2px;padding:3px;box-shadow:0 1px 3px rgba(0,0,0,.1);"><div style="font-size:4px;font-weight:700;color:#ea580c;">Revenue</div><div style="font-size:3px;color:#888;">Tracking</div></div>
                   </div>
                   <div style="background:white;border-radius:2px;height:18px;padding:2px 3px;box-shadow:0 1px 3px rgba(0,0,0,.1);">
                     <div style="font-size:3px;color:#888;margin-bottom:2px;">Revenue Trend</div>
@@ -1079,7 +1033,7 @@ body.modal-open { overflow: hidden; }
           </div>
           <div class="proj-footer">
             <span class="proj-role">Full Stack Developer</span>
-            <a href="#contact" class="proj-link">Enquire →</a>
+            <a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="proj-link">Enquire →</a>
           </div>
         </div>
       </div>
@@ -1097,13 +1051,13 @@ body.modal-open { overflow: hidden; }
                   <div class="inv-header"><div class="inv-header-dot"></div></div>
                   <div style="display:flex;justify-content:space-between;padding:2px 0;">
                     <div style="font-size:4px;color:rgba(255,255,255,0.5);">TechFlow</div>
-                    <div style="font-size:4px;color:#4a9dff;font-weight:700;">$618.00</div>
+                    <div style="font-size:4px;color:#4a9dff;font-weight:700;">Invoice</div>
                   </div>
                   <div style="font-size:3.5px;color:rgba(255,255,255,0.3);margin-bottom:2px;">Recent Invoices</div>
                   <div class="inv-row"></div>
                   <div class="inv-row"></div>
                   <div class="inv-row" style="width:70%;"></div>
-                  <div class="inv-amount"><div class="inv-amount-txt">$267.84</div></div>
+                  <div class="inv-amount"><div class="inv-amount-txt">Total</div></div>
                 </div>
               </div>
             </div>
@@ -1128,7 +1082,7 @@ body.modal-open { overflow: hidden; }
           </div>
           <div class="proj-footer">
             <span class="proj-role">Mobile App Developer</span>
-            <a href="#contact" class="proj-link">Enquire →</a>
+            <a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="proj-link">Enquire →</a>
           </div>
         </div>
       </div>
@@ -1157,11 +1111,11 @@ body.modal-open { overflow: hidden; }
                     <div class="groc-body" style="padding:0;">
                       <div class="groc-item" style="display:flex;flex-direction:column;justify-content:flex-end;padding:2px;background:#f0f8f0;">
                         <div style="font-size:3px;color:#1a1a1a;">Broccoli</div>
-                        <div style="font-size:3px;color:#2d7a4f;font-weight:700;">$2.99</div>
+                        <div style="font-size:3px;color:#2d7a4f;font-weight:700;">Fresh</div>
                       </div>
                       <div class="groc-item" style="display:flex;flex-direction:column;justify-content:flex-end;padding:2px;background:#fff8e8;">
                         <div style="font-size:3px;color:#1a1a1a;">Bananas</div>
-                        <div style="font-size:3px;color:#2d7a4f;font-weight:700;">$0.69</div>
+                        <div style="font-size:3px;color:#2d7a4f;font-weight:700;">Quality</div>
                       </div>
                     </div>
                   </div>
@@ -1179,7 +1133,7 @@ body.modal-open { overflow: hidden; }
           </div>
           <div class="proj-footer">
             <span class="proj-role">Flutter Developer · UI/UX & App Functionality</span>
-            <a href="#contact" class="proj-link">Enquire →</a>
+            <a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="proj-link">Enquire →</a>
           </div>
         </div>
       </div>
@@ -1195,17 +1149,18 @@ body.modal-open { overflow: hidden; }
             <span class="p-tag">Flutter Desktop</span><span class="p-tag">Dart</span><span class="p-tag">SQLite</span><span class="p-tag">Offline-first</span><span class="p-tag">Windows</span><span class="p-tag">Receipt Printing</span>
           </div>
           <div style="margin-top:16px;font-size:0.78rem;color:var(--muted2);line-height:1.7;">
-            <strong style="color:var(--orange);">Features:</strong> Point of Sale · Inventory Management · Repair Tracking · Customer CRM · Sales & Quotations · Expense Management · PDF Receipts · Barcode Scanning · Analytics Dashboard
+            <strong style="color:var(--orange);">Features:</strong> Point of Sale &nbsp;·&nbsp; ✓ Inventory &nbsp;·&nbsp; ✓ Repairs &nbsp;·&nbsp; ✓ Customers<br>
+            ✓ Expenses &nbsp;·&nbsp; ✓ Quotations &nbsp;·&nbsp; ✓ PDF Receipts &nbsp;·&nbsp; ✓ Analytics
           </div>
           <div class="proj-footer" style="margin-top:20px;">
             <span class="proj-role">Full Stack Developer (Flutter Desktop)</span>
-            <a href="#contact" class="proj-link" style="color:var(--orange);">Enquire →</a>
+            <a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="proj-link">Enquire →</a>
           </div>
         </div>
         <div class="proj-thumb mockup-pos" style="height:100%;min-height:300px;order:2;">
           <img src="images/drcomputers.jpg" alt="Dr.Computers POS" onerror="this.style.display='none'">
           <div class="proj-thumb-inner" style="opacity:0.3;position:relative;flex-direction:column;gap:6px;padding:16px;">
-            <div style="width:90%;height:45%;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.5);display:flex;">
+            <div style="width:90%;height:45%;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.5);">
               <div style="width:28%;background:#0a120b;padding:4px;">
                 <div style="font-size:3.5px;color:#4ade80;font-weight:700;margin-bottom:3px;">Dr.Computers</div>
                 <div style="height:5px;background:rgba(74,222,128,0.15);border-radius:1px;margin-bottom:1px;display:flex;align-items:center;padding:0 2px;"><span style="font-size:2.5px;color:#4ade80;">Dashboard</span></div>
@@ -1217,8 +1172,8 @@ body.modal-open { overflow: hidden; }
                 <div style="font-size:4px;font-weight:700;color:#1a1a1a;margin-bottom:3px;">Dashboard</div>
                 <div style="display:flex;gap:2px;margin-bottom:2px;">
                   <div style="flex:1;background:#fff;border-radius:1px;padding:2px;border:1px solid #e8e8e8;"><div style="font-size:5px;font-weight:700;color:#1a1a1a;">17</div><div style="font-size:2.5px;color:#888;">Sales</div></div>
-                  <div style="flex:1;background:#fff7ed;border-radius:1px;padding:2px;border:1px solid #fed7aa;"><div style="font-size:4px;font-weight:700;color:#ea580c;">PKR188K</div><div style="font-size:2.5px;color:#888;">Revenue</div></div>
-                  <div style="flex:1;background:#ecfdf5;border-radius:1px;padding:2px;border:1px solid #a7f3d0;"><div style="font-size:4px;font-weight:700;color:#059669;">PKR52K</div><div style="font-size:2.5px;color:#888;">Profit</div></div>
+                  <div style="flex:1;background:#fff7ed;border-radius:1px;padding:2px;border:1px solid #fed7aa;"><div style="font-size:4px;font-weight:700;color:#ea580c;">Sales</div><div style="font-size:2.5px;color:#888;">Tracking</div></div>
+                  <div style="flex:1;background:#ecfdf5;border-radius:1px;padding:2px;border:1px solid #a7f3d0;"><div style="font-size:4px;font-weight:700;color:#059669;">Profit</div><div style="font-size:2.5px;color:#888;">Growth</div></div>
                 </div>
                 <div style="background:white;border-radius:1px;padding:2px;border:1px solid #e8e8e8;">
                   <div style="display:flex;align-items:flex-end;gap:1px;height:14px;">
@@ -1231,7 +1186,7 @@ body.modal-open { overflow: hidden; }
                 </div>
               </div>
             </div>
-            <div style="width:90%;height:45%;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.5);display:flex;">
+            <div style="width:90%;height:45%;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.5);">
               <div style="width:28%;background:#0a120b;padding:4px;">
                 <div style="height:5px;background:rgba(74,222,128,0.15);border-radius:1px;margin-bottom:1px;display:flex;align-items:center;padding:0 2px;"><span style="font-size:2.5px;color:#4ade80;">POS</span></div>
               </div>
@@ -1282,7 +1237,7 @@ body.modal-open { overflow: hidden; }
           <div class="proj-title">MediBook — Doctor Appointment System</div>
           <div class="proj-desc">Full appointment booking system with patient, doctor, and admin dashboards. JWT auth, schedule management, and API-driven architecture.</div>
           <div class="proj-tags"><span class="p-tag">Next.js</span><span class="p-tag">Django REST</span><span class="p-tag">PostgreSQL</span></div>
-          <div class="proj-footer"><span class="proj-role">Full Stack Developer</span><a href="#contact" class="proj-link">Enquire →</a></div>
+          <div class="proj-footer"><span class="proj-role">Full Stack Developer</span><a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="proj-link">Enquire →</a></div>
         </div>
       </div>
       <div class="proj-card r d2">
@@ -1296,7 +1251,7 @@ body.modal-open { overflow: hidden; }
           <div class="proj-title">Admin Dashboard & Inventory System</div>
           <div class="proj-desc">Real-time inventory & sales dashboard with chart-based analytics, CRUD operations, and role-based access control.</div>
           <div class="proj-tags"><span class="p-tag">React</span><span class="p-tag">Laravel</span><span class="p-tag">MySQL</span><span class="p-tag">Chart.js</span></div>
-          <div class="proj-footer"><span class="proj-role">Full Stack Developer</span><a href="#contact" class="proj-link">Enquire →</a></div>
+          <div class="proj-footer"><span class="proj-role">Full Stack Developer</span><a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="proj-link">Enquire →</a></div>
         </div>
       </div>
     </div>
@@ -1316,7 +1271,7 @@ body.modal-open { overflow: hidden; }
           <div class="proj-title">Invoice Generator App</div>
           <div class="proj-desc">Professional invoice creation and management app with PDF export, client management, auto-calculations, and light/dark mode. Built with React Native for iOS and Android.</div>
           <div class="proj-tags"><span class="p-tag">React Native</span><span class="p-tag">TypeScript</span><span class="p-tag">PDF Export</span><span class="p-tag">Local Storage</span></div>
-          <div class="proj-footer"><span class="proj-role">Mobile App Developer</span><a href="#contact" class="proj-link">Enquire →</a></div>
+          <div class="proj-footer"><span class="proj-role">Mobile App Developer</span><a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="proj-link">Enquire →</a></div>
         </div>
       </div>
       <div class="proj-card r d1">
@@ -1328,9 +1283,9 @@ body.modal-open { overflow: hidden; }
         </div>
         <div class="proj-body">
           <div class="proj-title">FreshMart — Grocery Store App</div>
-          <div class="proj-desc">Complete grocery shopping experience with category filtering, cart management, order summary, and clean architecture. High performance on both iOS and Android.</div>
+          <div class="proj-desc">Complete grocery shopping experience with category filtering, cart management, order summary, and smooth navigation. High performance on both iOS and Android.</div>
           <div class="proj-tags"><span class="p-tag">Flutter</span><span class="p-tag">Dart</span><span class="p-tag">Firebase</span><span class="p-tag">State Management</span></div>
-          <div class="proj-footer"><span class="proj-role">Flutter Developer</span><a href="#contact" class="proj-link">Enquire →</a></div>
+          <div class="proj-footer"><span class="proj-role">Flutter Developer</span><a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="proj-link">Enquire →</a></div>
         </div>
       </div>
     </div>
@@ -1339,7 +1294,7 @@ body.modal-open { overflow: hidden; }
   <!-- DESKTOP -->
   <div class="proj-panel" id="tab-desktop">
     <div class="proj-grid">
-      <div class="proj-card r" style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;border-color:rgba(255,107,53,0.2);">
+      <div class="proj-card r" style="grid-column:1/-1; display:grid; grid-template-columns:1fr 1fr; border-color:rgba(255,107,53,0.2);">
         <div class="proj-thumb mockup-pos" style="height:100%;min-height:280px;">
           <img src="images/drcomputers.jpg" alt="Dr.Computers" onerror="this.style.display='none'">
           <span class="proj-cat desktop">Flutter Desktop</span>
@@ -1351,15 +1306,68 @@ body.modal-open { overflow: hidden; }
           <div class="proj-title" style="font-size:1.3rem;">Dr.Computers POS System</div>
           <div class="proj-desc">Fully offline desktop point-of-sale built for a computer hardware shop. Covers the complete business: sales, inventory, repair tracking, customer management, expense logging, and thermal receipt printing.</div>
           <div class="proj-tags"><span class="p-tag">Flutter</span><span class="p-tag">Dart</span><span class="p-tag">SQLite</span><span class="p-tag">Offline</span><span class="p-tag">Windows</span></div>
-          <div style="margin-top:12px;">
-            <div style="font-size:0.75rem;color:var(--muted2);line-height:1.8;">
-              ✓ Point of Sale &nbsp;·&nbsp; ✓ Inventory &nbsp;·&nbsp; ✓ Repairs &nbsp;·&nbsp; ✓ Customers<br>
-              ✓ Expenses &nbsp;·&nbsp; ✓ Quotations &nbsp;·&nbsp; ✓ PDF Receipts &nbsp;·&nbsp; ✓ Analytics
-            </div>
+          <div style="margin-top:12px;font-size:0.78rem;color:var(--muted2);line-height:1.8;">
+            <strong style="color:var(--orange);">Features:</strong> Point of Sale &nbsp;·&nbsp; ✓ Inventory &nbsp;·&nbsp; ✓ Repairs &nbsp;·&nbsp; ✓ Customers<br>
+            ✓ Expenses &nbsp;·&nbsp; ✓ Quotations &nbsp;·&nbsp; ✓ PDF Receipts &nbsp;·&nbsp; ✓ Analytics
           </div>
-          <div class="proj-footer" style="margin-top:20px;"><span class="proj-role">Flutter Desktop Developer</span><a href="#contact" class="proj-link" style="color:var(--orange);">Enquire →</a></div>
+          <div class="proj-footer" style="margin-top:20px;">
+            <span class="proj-role">Flutter Desktop Developer</span>
+            <a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="proj-link" style="color:var(--orange);">Enquire →</a>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="s-eyebrow">What I offer</div>
+  <h2 class="s-title">Services & <em>Solutions</em></h2>
+  
+  <div class="services-grid r">
+    <div class="service-card">
+      <div class="service-icon">🌐</div>
+      <div class="service-title">Web Development</div>
+      <div class="service-desc">Full-stack web applications built with React, Next.js, and modern backends. From landing pages to complex dashboards.</div>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">📱</div>
+      <div class="service-title">Mobile Apps</div>
+      <div class="service-desc">Cross-platform mobile applications using Flutter and React Native. One codebase, native performance on iOS & Android.</div>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">🖥️</div>
+      <div class="service-title">Desktop Software</div>
+      <div class="service-desc">Offline-first Windows applications with Flutter Desktop. POS systems, inventory managers, and business tools.</div>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <div class="service-title">API & Backend</div>
+      <div class="service-desc">RESTful APIs and backend systems with Django, FastAPI, Node.js, and Laravel. Secure, scalable architecture.</div>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">🎨</div>
+      <div class="service-title">UI/UX Design</div>
+      <div class="service-desc">User-centered interface design that converts. Clean, modern aesthetics with focus on usability and accessibility.</div>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">🚀</div>
+      <div class="service-title">Deployment & DevOps</div>
+      <div class="service-desc">Cloud deployment, CI/CD pipelines, Docker containers. Get your application live and running smoothly.</div>
+    </div>
+  </div>
+  
+  <div class="upwork-badge r d1">
+    <div class="ub-icon">💼</div>
+    <div class="ub-text">
+      <strong>Ready to start your project?</strong>
+      Let's discuss your requirements and build something great together.
     </div>
   </div>
 </section>
@@ -1378,10 +1386,10 @@ body.modal-open { overflow: hidden; }
       <div class="about-body">
         <p>I'm <strong>Hammad Ghani</strong>, a full-stack developer based in Pakistan with over 4 years of experience building production-ready software. I've delivered <strong>15+ successful projects</strong> across the full spectrum — from customer-facing websites to complex backend systems to mobile apps to offline desktop tools.</p>
         <p>What sets me apart is that I approach every project from a <strong>business perspective first</strong>. Before touching any code, I want to understand what you're actually trying to achieve — because a technically impressive product that misses the business goal is still a failure.</p>
-        <p>I'm available for freelance work on <a href="https://www.upwork.com" target="_blank">Upwork</a> and direct engagements. I'm equally comfortable with fixed-price projects when the scope is clear.</p>
+        <p>I'm available for freelance work on <a href="https://www.upwork.com" target="_blank">Upwork</a> and direct engagements.</p>
       </div>
       <div class="about-ctas">
-        <a href="#contact" class="cta-main">Work With Me</a>
+        <a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="cta-main">Work With Me</a>
         <a href="#projects" class="cta-ghost">See Projects</a>
       </div>
     </div>
@@ -1428,82 +1436,6 @@ body.modal-open { overflow: hidden; }
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="s-eyebrow">What I offer</div>
-  <h2 class="s-title">Services & <em>Pricing</em></h2>
-  <div class="services-grid r">
-    <div class="service-card">
-      <div class="service-icon">🌐</div>
-      <h3 class="service-title">Business Website</h3>
-      <p class="service-desc">Professional business websites with CMS, SEO optimization, and admin panels. Perfect for small to medium businesses.</p>
-      <div class="service-price">$500 - $2,000</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">⚡</div>
-      <h3 class="service-title">Web Application</h3>
-      <p class="service-desc">Custom web apps with complex functionality, APIs, databases, and user authentication. Built for scale.</p>
-      <div class="service-price">$1,500 - $5,000+</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">📱</div>
-      <h3 class="service-title">Mobile App</h3>
-      <p class="service-desc">iOS and Android apps using React Native or Flutter. Single codebase, native performance, full features.</p>
-      <div class="service-price">$2,000 - $8,000+</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🖥️</div>
-      <h3 class="service-title">Desktop App</h3>
-      <p class="service-desc">Cross-platform desktop applications using Flutter. Offline-first, Windows/macOS compatible, professional tools.</p>
-      <div class="service-price">$1,500 - $6,000+</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔧</div>
-      <h3 class="service-title">API & Backend</h3>
-      <p class="service-desc">RESTful APIs, microservices, database design, and backend architecture. Django, FastAPI, Node.js.</p>
-      <div class="service-price">$800 - $3,000+</div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process">
-  <div class="s-eyebrow">How I work</div>
-  <h2 class="s-title">My <em>Process</em></h2>
-  <div class="process-row r">
-    <div class="p-step">
-      <div class="p-step-num">01</div>
-      <div class="p-step-dot"></div>
-      <div class="p-step-title">Understand</div>
-      <div class="p-step-text">I learn your business goals, target users, and what success actually looks like before anything else.</div>
-    </div>
-    <div class="p-step">
-      <div class="p-step-num">02</div>
-      <div class="p-step-dot"></div>
-      <div class="p-step-title">Plan</div>
-      <div class="p-step-text">Architecture, tech stack, milestones, and timeline — all agreed before a line of code is written.</div>
-    </div>
-    <div class="p-step">
-      <div class="p-step-num">03</div>
-      <div class="p-step-dot"></div>
-      <div class="p-step-title">Build</div>
-      <div class="p-step-text">Iterative development with regular demos. You see progress throughout, not just at the end.</div>
-    </div>
-    <div class="p-step">
-      <div class="p-step-num">04</div>
-      <div class="p-step-dot"></div>
-      <div class="p-step-title">Ship</div>
-      <div class="p-step-text">Performance audits, security checks, deployment, and go-live support for a smooth launch.</div>
-    </div>
-    <div class="p-step">
-      <div class="p-step-num">05</div>
-      <div class="p-step-dot"></div>
-      <div class="p-step-title">Support</div>
-      <div class="p-step-text">Post-launch monitoring, fixes, and features. I treat your product as a long-term partnership.</div>
-    </div>
-  </div>
-</section>
-
 <!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="s-eyebrow">Client reviews</div>
@@ -1545,87 +1477,6 @@ body.modal-open { overflow: hidden; }
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-wrap">
-    <div class="contact-left r">
-      <div class="s-eyebrow">Get in touch</div>
-      <h2>Let's Build<br>Something <em>Real.</em></h2>
-      <p>Have a project in mind? Tell me what you need and I'll come back with a clear plan, honest timeline, and the right tech stack for your goals.</p>
-      <div class="c-links">
-        <a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="c-link">
-          <span class="c-link-icon">💼</span>
-          <div>
-            <span class="c-link-label">Upwork</span>
-            Hire me on Upwork 
-          </div>
-        </a>
-      </div>
-      <div class="c-avail">
-        <div class="avail-dot"></div>
-        Available for new projects
-      </div>
-    </div>
-
-    <div class="r d2">
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <div class="cf-row">
-          <div class="cf-field">
-            <label class="cf-label">Your Name</label>
-            <input type="text" class="cf-input" placeholder="John Smith" required>
-          </div>
-          <div class="cf-field">
-            <label class="cf-label">Email Address</label>
-            <input type="email" class="cf-input" placeholder="john@company.com" required>
-          </div>
-        </div>
-        <div class="cf-field">
-          <label class="cf-label">What do you need?</label>
-          <select class="cf-select">
-            <option value="">Select a service...</option>
-            <option>Business / eCommerce Website</option>
-            <option>Custom Web Application</option>
-            <option>Mobile App (Flutter or React Native)</option>
-            <option>Desktop Application (Flutter)</option>
-            <option>Backend API / Django / FastAPI</option>
-            <option>Admin Dashboard</option>
-            <option>Something else</option>
-          </select>
-        </div>
-        <div class="cf-row">
-          <div class="cf-field">
-            <label class="cf-label">Budget Range</label>
-            <select class="cf-select">
-              <option value="">Select...</option>
-              <option>Under $500</option>
-              <option>$500 – $1,500</option>
-              <option>$1,500 – $5,000</option>
-              <option>$5,000+</option>
-              <option>Ongoing / Hourly</option>
-            </select>
-          </div>
-          <div class="cf-field">
-            <label class="cf-label">Timeline</label>
-            <select class="cf-select">
-              <option value="">Select...</option>
-              <option>ASAP</option>
-              <option>1–2 weeks</option>
-              <option>1 month</option>
-              <option>2–3 months</option>
-              <option>Flexible</option>
-            </select>
-          </div>
-        </div>
-        <div class="cf-field">
-          <label class="cf-label">Tell me about your project</label>
-          <textarea class="cf-textarea" placeholder="Describe what you're building, who it's for, and any specific requirements..." required></textarea>
-        </div>
-        <button type="submit" class="cf-submit" id="submit-btn">Send Message →</button>
-      </form>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <a href="#hero" class="footer-logo">Hammad <span>Ghani</span></a>
@@ -1643,9 +1494,9 @@ body.modal-open { overflow: hidden; }
     <!-- Image Gallery -->
     <div class="modal-gallery">
       <div class="modal-gallery-main" id="modal-gallery-main">
-        <div class="no-img-placeholder" id="modal-placeholder">
-          <div class="placeholder-icon" id="modal-placeholder-icon">🖥️</div>
-          <div class="placeholder-text">Add images/[filename].jpg to show screenshots</div>
+        <div class="no-img-placeholder" id="modal-placeholder" style="display:none;">
+          <div class="placeholder-icon" id="modal-placeholder-icon"></div>
+          <div class="placeholder-text"></div>
         </div>
       </div>
       <div class="modal-thumbs" id="modal-thumbs"></div>
@@ -1654,9 +1505,9 @@ body.modal-open { overflow: hidden; }
     <!-- Content -->
     <div class="modal-content">
       <div class="modal-main">
-        <span class="modal-cat-badge" id="modal-badge">Web App</span>
-        <h2 class="modal-title" id="modal-title">Project Title</h2>
-        <p class="modal-subtitle" id="modal-subtitle">Short subtitle</p>
+        <span class="modal-cat-badge" id="modal-badge"></span>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-subtitle" id="modal-subtitle"></p>
 
         <div class="modal-section-label">Overview</div>
         <div class="modal-desc" id="modal-desc"></div>
@@ -1690,13 +1541,7 @@ body.modal-open { overflow: hidden; }
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
-// ── EMAILJS INIT ─────────────────────────────────────
-(function() {
-  emailjs.init("Y6xN6ssRTD-1xoN2y"); // Replace with your EmailJS public key
-})();
-
 // ── CURSOR ──────────────────────────────────────────
 const cur = document.getElementById('cur');
 const ring = document.getElementById('cur-ring');
@@ -1716,49 +1561,6 @@ function switchTab(btn, tab) {
   document.querySelectorAll('.proj-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('tab-'+tab).classList.add('active');
-}
-
-// ── FORM ─────────────────────────────────────────────
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = document.getElementById('submit-btn');
-  const form = e.target;
-  
-  // Get form data
-  const formData = {
-    name: form.querySelector('input[type="text"]').value,
-    email: form.querySelector('input[type="email"]').value,
-    service: form.querySelector('select').value,
-    budget: form.querySelectorAll('select')[1].value,
-    timeline: form.querySelectorAll('select')[2].value,
-    message: form.querySelector('textarea').value
-  };
-
-  // Show loading state
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-
-  // Send email using EmailJS
-  emailjs.send('service_4puzwqi', 'template_apkt206', formData)
-    .then(function(response) {
-      btn.textContent = '✓ Message sent!';
-      btn.style.background = '#38d9f5';
-      form.reset();
-      setTimeout(() => { 
-        btn.textContent = 'Send Message →'; 
-        btn.style.background = 'var(--neon)'; 
-        btn.disabled = false; 
-      }, 4000);
-    })
-    .catch(function(error) {
-      btn.textContent = '✗ Failed to send';
-      btn.style.background = '#ff6b35';
-      setTimeout(() => { 
-        btn.textContent = 'Send Message →'; 
-        btn.style.background = 'var(--neon)'; 
-        btn.disabled = false; 
-      }, 4000);
-    });
 }
 
 // ── NAV ACTIVE ───────────────────────────────────────
@@ -1910,7 +1712,7 @@ function openProject(id) {
 
   // CTAs
   const ctaWrap = document.getElementById('modal-cta-wrap');
-  let ctaHtml = `<a href="#contact" class="modal-cta" onclick="closeModal()">Discuss This Project →</a>`;
+  let ctaHtml = `<a href="https://www.upwork.com/freelancers/~01315dcc4a04af2808?mp_source=share" target="_blank" class="modal-cta" onclick="closeModal()">Discuss This Project →</a>`;
   if (p.liveUrl) ctaHtml += `<a href="${p.liveUrl}" target="_blank" class="modal-cta ghost">Visit Live Site ↗</a>`;
   ctaWrap.innerHTML = ctaHtml;
 
@@ -2006,7 +1808,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const id = titleMap[title];
     if (!id) return;
 
-    card.style.cursor = 'none';
+    card.style.cursor = 'pointer';
     card.addEventListener('click', (e) => {
       // Don't open if clicking a link inside
       if (e.target.closest('a')) return;
@@ -2030,6 +1832,11 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') selectThumb(Math.min(activeThumb+1, currentImages.length-1));
   if (e.key === 'ArrowLeft') selectThumb(Math.max(activeThumb-1, 0));
 });
+
+// Remove display none from modal overlay CSS
+document.getElementById('modal-overlay').style.display = '';
+
 </script>
+
 </body>
 </html>
