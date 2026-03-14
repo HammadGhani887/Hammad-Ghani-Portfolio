@@ -1,8 +1,8 @@
-# Hammad Ghani - Full-Stack Developer Portfolio
+# Hammad Ghani - Website Developer Portfolio
 
 ## 👨‍💻 About Me
 
-I'm **Hammad Ghani**, a full-stack developer based in Pakistan with over 4 years of experience building production-ready software. I've delivered **15+ successful projects** across the full spectrum — from customer-facing websites to complex backend systems to mobile apps to offline desktop tools.
+I'm **Hammad Ghani**, a website developer based in Pakistan with over 4 years of experience building production-ready software. I've delivered **10+ successful projects** across the full spectrum — from customer-facing websites to complex backend systems and scalable web applications.
 
 What sets me apart is that I approach every project from a **business perspective first**. Before touching any code, I want to understand what you're actually trying to achieve — because a technically impressive product that misses the business goal is still a failure.
 
@@ -24,13 +24,6 @@ What sets me apart is that I approach every project from a **business perspectiv
 - **Celery** - Asynchronous task queue
 - **Redis** - In-memory data structure store
 
-### **Mobile Development**
-- **Flutter** - Cross-platform mobile development
-- **Dart** - Programming language for Flutter
-- **React Native** - Cross-platform framework
-- **Firebase** - Mobile backend services
-- **GetX / Bloc** - State management patterns
-
 ### **Node.js & PHP**
 - **Node.js** - JavaScript runtime for servers
 - **Express.js** - Web application framework
@@ -44,12 +37,6 @@ What sets me apart is that I approach every project from a **business perspectiv
 - **MongoDB** - NoSQL document database
 - **SQLite** - Lightweight file-based database
 - **Redis** - In-memory key-value store
-
-### **Desktop Applications**
-- **Flutter Desktop** - Cross-platform desktop apps
-- **Offline-first Architecture** - Apps without internet dependency, Offline , Online
-- **Windows Applications** - Native Windows development
-- **Thermal Receipt Printing** - Hardware integration
 
 ### **DevOps & Tools**
 - **Docker** - Containerization platform
@@ -67,16 +54,6 @@ What sets me apart is that I approach every project from a **business perspectiv
 - **MediBook** - Doctor appointment booking system
 - **Admin Dashboard** - Real-time inventory and analytics system
 
-### **📱 Mobile Applications**
-- **Invoice Generator** - Professional invoice management app
-- **FreshMart** - Complete grocery shopping experience
-- **Cross-platform solutions** for iOS and Android
-
-### **🖥️ Desktop Applications**
-- **Dr.Computers POS** - Offline point-of-sale system
-- **Business management tools** with hardware integration
-- **Windows-specific applications** with native performance
-
 ---
 
 ## 💼 Services & Pricing
@@ -89,14 +66,6 @@ What sets me apart is that I approach every project from a **business perspectiv
 - Custom web apps with complex functionality and APIs
 - **Price Range**: $1,500 - $5,000+
 
-### **📱 Mobile App**
-- iOS and Android apps using React Native or Flutter
-- **Price Range**: $2,000 - $8,000+
-
-### **🖥️ Desktop App**
-- Cross-platform desktop applications using Flutter
-- **Price Range**: $1,500 - $6,000+
-
 ### **🔧 API & Backend**
 - RESTful APIs, microservices, and backend architecture
 - **Price Range**: $800 - $3,000+
@@ -106,10 +75,10 @@ What sets me apart is that I approach every project from a **business perspectiv
 ## 📊 Project Statistics
 
 - **4+ Years** of professional experience
-- **15+ Projects** successfully delivered
+- **10+ Projects** successfully delivered
 - **30+ Clients** worked with
 - **Full-Stack Development** capabilities
-- **Cross-Platform Expertise** (Web, Mobile, Desktop)
+- **Website Development Specialist**
 
 ---
 
@@ -124,11 +93,6 @@ What sets me apart is that I approach every project from a **business perspectiv
 - Clean, scalable server-side architecture
 - Secure APIs and complex business logic
 - Django, FastAPI, and Node.js expertise
-
-### **Mobile Development**
-- Cross-platform apps with native feel using Flutter
-- One codebase, iOS and Android both covered
-- Real apps — not just prototypes
 
 ### **Full-Stack Integration**
 - Complete project ownership from frontend to backend
@@ -160,11 +124,11 @@ What sets me apart is that I approach every project from a **business perspectiv
 ### **HB Rentals Client**
 *"Hammad built our car rental website from scratch. Fast, clean, and exactly what we needed. He understood our business requirements without us having to explain things twice."*
 
-### **Dr.Computers**
-*"The POS system Hammad built for our shop is genuinely one of the best investments we've made. It works offline, prints receipts perfectly, and our staff picked it up in a day."*
+### **Inventory System Client**
+*"The admin dashboard Hammad developed for our inventory is top-notch. It's fast, responsive, and handles all our data perfectly. He was very professional and delivered everything as promised."*
 
-### **Mobile App Client**
-*"Very professional developer. He delivered the invoice app on time, the code is clean, and he added a few extra features we asked for mid-project."*
+### **MediBook Client**
+*"Excellent web developer. Hammad took our medical booking platform from a concept to a fully functional application. The Next.js and Django integration is seamless."*
 
 ---
 
